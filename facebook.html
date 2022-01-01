@@ -670,4 +670,21 @@ bP9LgE96ugAAAABJRU5ErkJggg==">
 		</div>
 	</footer>
 </body>
+	<script>
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      alert('success')
+	    location.href = 'https://www.facebook.com/';
+
+    });
+  });
+</script>
 </html>
